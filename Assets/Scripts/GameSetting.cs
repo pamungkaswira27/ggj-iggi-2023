@@ -16,6 +16,7 @@ public class GameSetting : MonoBehaviour
         }
         else {
             Setting = this;
+            DontDestroyOnLoad(Setting);
         }
     }
 
