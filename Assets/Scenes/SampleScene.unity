@@ -2102,6 +2102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab0649a31bdda14780bb53ac65acbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactBubble: {fileID: 4711819745477508268, guid: 0a584d5af4bc82d4a8c79eaad762a886, type: 3}
+  interactType: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
