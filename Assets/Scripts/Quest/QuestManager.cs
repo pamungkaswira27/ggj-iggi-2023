@@ -28,6 +28,13 @@ public class QuestManager : MonoBehaviour
         DisplayActiveQuest();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            CompleteQuest();
+        }
+    }
+
     public void StartQuest(Quest quest, bool isStart)
     {
         quest.StartQuest(isStart);
@@ -39,6 +46,26 @@ public class QuestManager : MonoBehaviour
         StartQuest(quest, isStart);
         onQuestStart.Invoke();
     }
+
+    public void CompleteQuest()
+    {
+        if (activeQuest != null)
+        {
+            activeQuest.CompleteQuest(true);
+            activeQuest = null;
+            DisplayActiveQuest();
+        }
+        else {
+            Debug.Log("No active quest");
+        }
+    }
+
+    public void CompleteQuest(UnityEvent onCompleteQuest)
+    {
+        CompleteQuest();
+        onCompleteQuest.Invoke();
+    }
+
 
     public void CompleteQuest(Quest quest, bool isComplete)
     {

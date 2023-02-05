@@ -2580,13 +2580,13 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1419521526}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1713516639}
+        m_TargetAssemblyTypeName: AssignedQuest, Assembly-CSharp
+        m_MethodName: ActivateQuestOnSelf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2617,12 +2617,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1713516632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ce888565887ad42816e9526b990f84, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e9174c40bb49024b9b05281dc49ec95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: q01
-  name: Gather
-  description: Gather some herb
+  quest:
+    id: q01
+    name: Gather
+    description: Gather all item around
 --- !u!1 &1775337175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +2755,18 @@ PrefabInstance:
     - target: {fileID: 450576568683919711, guid: 6266961e831fe4b41b9c70070a83da14, type: 3}
       propertyPath: m_Name
       value: Toy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382235937130955784, guid: 6266961e831fe4b41b9c70070a83da14, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1419521528}
+    - target: {fileID: 7382235937130955784, guid: 6266961e831fe4b41b9c70070a83da14, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382235937130955784, guid: 6266961e831fe4b41b9c70070a83da14, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuestManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6266961e831fe4b41b9c70070a83da14, type: 3}
