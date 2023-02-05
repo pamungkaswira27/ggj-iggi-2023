@@ -12,6 +12,7 @@ public class ItemPickup : MonoBehaviour
 
     public void PickItem()
     {
+        AudioManager.Instance.PlayItemPickedUpSFX();
         inventory.AddItem(inventoryItem);
         inventory.DisplayItem();
         gameObject.SetActive(false);
